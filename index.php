@@ -1,5 +1,5 @@
 <?php
-include "backend/koneksi.php";
+include "public/backend/koneksi.php";
 ?>
 
 <!DOCTYPE html>
@@ -10,8 +10,8 @@ include "backend/koneksi.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../src/stye.css">
-    <script src="../finisher-header.es5.min.js"></script>
+    <link rel="stylesheet" href="src/stye.css">
+    <script src="finisher-header.es5.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -57,7 +57,7 @@ include "backend/koneksi.php";
             <button onclick="detectColor()" class="bg-[#e7de2b] text-white text-[22px] rounded-full py-1 px-16">Scan</button>
         </div>
 
-        <div class="rotate-180"><div class="mx-auto w-28 h-28 bg-cover animate-bounce" style="background-image: url(../src/img/arrow.svg)"></div></div>
+        <div class="rotate-180"><div class="mx-auto w-28 h-28 bg-cover animate-bounce" style="background-image: url(src/img/arrow.svg)"></div></div>
     </div>
 
     <!-- Information -->
@@ -97,21 +97,21 @@ include "backend/koneksi.php";
     <!-- Gallery -->
     <div class="container min-h-screen" id="Gallery">
         <div class="text-white text-4xl font-bold font-DmSans lg:ml-20 ml-5 pb-5 pt-24">Gallery</div>
-        <a href="../src/img/image2.jpg" class="flex flex-col lg:mx-20 mx-5 mb-5 items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+        <a href="src/img/image2.jpg" class="flex flex-col lg:mx-20 mx-5 mb-5 items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="../src/img/image2.jpg" alt="">
             <div class="flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
             </div>
         </a>
-        <a href="../src/img/image2.jpg" class="flex flex-col lg:mx-20 mx-5 mb-5 items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+        <a href="src/img/image2.jpg" class="flex flex-col lg:mx-20 mx-5 mb-5 items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="../src/img/image2.jpg" alt="">
             <div class="flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
             </div>
         </a>
-        <a href="../src/img/image2.jpg" class="flex flex-col lg:mx-20 mx-5 mb-5 items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+        <a href="src/img/image2.jpg" class="flex flex-col lg:mx-20 mx-5 mb-5 items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="../src/img/image2.jpg" alt="">
             <div class="flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
@@ -268,7 +268,7 @@ include "backend/koneksi.php";
             return;
         }
         
-        fetch(`backend/get_ph_info.php?ph=${currentPh}`)
+        fetch(`public/backend/get_ph_info.php?ph=${currentPh}`)
             .then(response => response.json())
             .then(data => {
                 console.log("Response dari server:", data);
